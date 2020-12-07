@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 export default class Post extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
 
     this.state = {
       visible: false,
