@@ -12,7 +12,7 @@ export default class Posts extends Component {
       )
     })
     return(
-      <div className="posts">
+      <div>
         {postsTemplate}
       </div>
     )

@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 export default class Contacts extends  Component {
   render() {
     return (
-      <div>
-        telegram
+      <div className={'contacts'}>
+        telegram @alexandrpenkov
       </div>
     )
   }
