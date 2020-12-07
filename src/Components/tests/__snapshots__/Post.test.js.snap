@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`post tests first tests 1`] = `
+<div
+  className="post"
+>
+  <p
+    className="title"
+  >
+    title
+  </p>
+  <p
+    className="preview"
+  >
+    little text
+  </p>
+  <button
+    className="post_readMore"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "visibility": "visible",
+      }
+    }
+  >
+    Читать
+  </button>
+  <p
+    className="body"
+    style={
+      Object {
+        "height": 0,
+        "transition": "height 2s ease",
+        "visibility": "hidden",
+      }
+    }
+  >
+    big text
+  </p>
+</div>
+`;

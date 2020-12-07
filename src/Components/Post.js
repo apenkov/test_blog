@@ -29,7 +29,7 @@ export default class Post extends Component {
           visibility: this.state.visible ? 'visible' : 'hidden',
           height: this.state.visible ? 'auto' : 0,
           transition: 'height 2s ease'
-        }}>{data.text}</p>
+        }}><span>{data.text}</span></p>
       </div>
     )
   }
