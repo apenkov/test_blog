@@ -3,7 +3,7 @@ module.exports= {
     {
       title:'first posts',
       littleText:"Small preview for first  post",
-      text:"первая запись"
+      text:"<h3>первая запись</h3>"
     },{
       title:'second posts',
       littleText: "Small preview again",
