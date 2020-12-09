@@ -7,7 +7,6 @@ import Blog from "../Pages/Blog";
 export default class Header extends Component {
   render() {
     return (
-      <>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div className={'header'}>
             <div className={'innerHeader'}>
@@ -22,12 +21,11 @@ export default class Header extends Component {
             </div>
           </div>
           <Switch>
-              <Route exact path={process.env.PUBLIC_URL +"/"} component={Home}/>
+              <Route exact path={"/"} component={Home}/>
               <Route  path={process.env.PUBLIC_URL +"/contacts"} component={Contacts}/>
               <Route  path={process.env.PUBLIC_URL +"/blog"} component={Blog}/>
           </Switch>
         </BrowserRouter>
-      </>
     )
   }
 }

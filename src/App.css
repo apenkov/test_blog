@@ -37,6 +37,19 @@
   }
 }
 
+pre{
+  background-color: lightgrey;
+  color: darkslategray;
+  padding: 25px 25px;
+}
+
+code{
+  background-color: lightgrey;
+  color: darkslategray;
+  padding: 0px 8px;
+
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -103,9 +116,12 @@
 }
 
 .posts{
+  display: block;
   margin: auto;
   /*text-align: center;*/
+  width:1200px;
   padding: 20px 20px;
+  line-height: 2;
 }
 
 .post{

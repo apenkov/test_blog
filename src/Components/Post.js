@@ -12,7 +12,7 @@ export default class Post extends Component {
 
   handleClick() {
     this.setState(state => ({
-      visible: true
+      visible: !this.state.visible
     }))
   }
 
@@ -29,7 +29,11 @@ export default class Post extends Component {
           visibility: this.state.visible ? 'visible' : 'hidden',
           height: this.state.visible ? 'auto' : 0,
           transition: 'height 2s ease'
-        }}>{data.text}</p>
+        }}
+        dangerouslySetInnerHTML={{__html:data.text}}></p>
+        <button href="#" className={`post_readLess`} onClick={this.handleClick}
+                style={{visibility: this.state.visible ? 'visible' : 'hidden'}}>Скрыть
+        </button>
       </div>
     )
   }
