@@ -28,6 +28,11 @@ exports[`post tests first tests 1`] = `
   </button>
   <p
     className="body"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "big text",
+      }
+    }
     style={
       Object {
         "height": 0,
@@ -35,8 +40,18 @@ exports[`post tests first tests 1`] = `
         "visibility": "hidden",
       }
     }
+  />
+  <button
+    className="post_readLess"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "visibility": "hidden",
+      }
+    }
   >
-    big text
-  </p>
+    Скрыть
+  </button>
 </div>
 `;
