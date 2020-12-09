@@ -110,6 +110,7 @@ module.exports= {
         "<span class=\"hljs-symbol\">        uses:</span> JamesIves<span class=\"hljs-regexp\">/github-pages-deploy-action@3.7.1 /</span>/ собственно сам экшен для деплоя, грубо говоря после того как мы сдеали билд проекта\n" +
         "<span class=\"hljs-comment\">// он запушит статику которую мы сбилдлили в ветку BRANCH у нас это gh pages</span>\n" +
         "<span class=\"hljs-symbol\">        with:</span>\n" +
+        // eslint-disable-next-line
         "<span class=\"hljs-symbol\">          GITHUB_TOKEN:</span> ${{ secrets.GITHUB_TOKEN }} <span class=\"hljs-comment\">// это надо указывать именно так,  гитхаб сам сходит и заберет ваш токен</span>\n" +
         "<span class=\"hljs-symbol\">          BRANCH:</span> gh-pages <span class=\"hljs-comment\">// ветка </span>\n" +
         "<span class=\"hljs-symbol\">          FOLDER:</span> build\n" +
