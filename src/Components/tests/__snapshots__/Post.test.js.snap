@@ -11,6 +11,11 @@ exports[`post tests first tests 1`] = `
   </p>
   <p
     className="preview"
+    style={
+      Object {
+        "visibility": "visible",
+      }
+    }
   >
     little text
   </p>
