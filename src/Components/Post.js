@@ -21,7 +21,7 @@ export default class Post extends Component {
     return (
       <div className="post">
         <p className="title">{data.title}</p>
-        <p className="preview">{data.littleText}</p>
+        <p className="preview" style={{visibility: this.state.visible ? 'hidden' : 'visible'}}>{data.littleText}</p>
         <button href="#" className={`post_readMore`} onClick={this.handleClick}
                 style={{visibility: this.state.visible ? 'hidden' : 'visible'}}>Читать
         </button>
