@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`posts tests render posts 1`] = `
+<div>
+  <div>
+    <div
+      className="post"
+    >
+      <p
+        className="title"
+      >
+        first post
+      </p>
+      <p
+        className="preview"
+        style={
+          Object {
+            "visibility": "visible",
+          }
+        }
+      >
+        little text
+      </p>
+      <button
+        className="post_readMore"
+        href="#"
+        onClick={[Function]}
+        style={
+          Object {
+            "visibility": "visible",
+          }
+        }
+      >
+        Читать
+      </button>
+      <p
+        className="body"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "big text",
+          }
+        }
+        style={
+          Object {
+            "height": 0,
+            "transition": "height 2s ease",
+            "visibility": "hidden",
+          }
+        }
+      />
+      <button
+        className="post_readLess"
+        href="#"
+        onClick={[Function]}
+        style={
+          Object {
+            "visibility": "hidden",
+          }
+        }
+      >
+        Скрыть
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="post"
+    >
+      <p
+        className="title"
+      >
+        second post
+      </p>
+      <p
+        className="preview"
+        style={
+          Object {
+            "visibility": "visible",
+          }
+        }
+      >
+        little text
+      </p>
+      <button
+        className="post_readMore"
+        href="#"
+        onClick={[Function]}
+        style={
+          Object {
+            "visibility": "visible",
+          }
+        }
+      >
+        Читать
+      </button>
+      <p
+        className="body"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "big text",
+          }
+        }
+        style={
+          Object {
+            "height": 0,
+            "transition": "height 2s ease",
+            "visibility": "hidden",
+          }
+        }
+      />
+      <button
+        className="post_readLess"
+        href="#"
+        onClick={[Function]}
+        style={
+          Object {
+            "visibility": "hidden",
+          }
+        }
+      >
+        Скрыть
+      </button>
+    </div>
+  </div>
+</div>
+`;
