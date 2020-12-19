@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import {Route, BrowserRouter, Switch, Link} from "react-router-dom";
-import Home from "../Pages/Home";
-import Contacts from "../Pages/Contacts";
-import Blog from "../Pages/Blog";
+import { Link } from "react-router-dom";
 
 export default class Header extends Component {
   render() {
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <>
           <div className={'header'}>
             <div className={'innerHeader'}>
               <div className={'logoContainer'}>
@@ -20,12 +17,8 @@ export default class Header extends Component {
               </ul>
             </div>
           </div>
-          <Switch>
-              <Route exact path={"/"} component={Home}/>
-              <Route  path={process.env.PUBLIC_URL +"/contacts"} component={Contacts}/>
-              <Route  path={process.env.PUBLIC_URL +"/blog"} component={Blog}/>
-          </Switch>
-        </BrowserRouter>
+
+        </>
     )
   }
 }
