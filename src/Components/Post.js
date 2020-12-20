@@ -17,11 +17,11 @@ export default class Post extends Component {
   }
 
   render() {
-    const data = this.props.data;
+    const post = this.props.post;
     return (
       <div className="post">
-        <p className="title">{data.title}</p>
-        <p className="preview" style={{visibility: this.state.visible ? 'hidden' : 'visible'}}>{data.littleText}</p>
+        <p className="title">{post.title}</p>
+        <p className="preview" style={{visibility: this.state.visible ? 'hidden' : 'visible'}}>{post.littleText}</p>
         <button href="#" className={`post_readMore`} onClick={this.handleClick}
                 style={{visibility: this.state.visible ? 'hidden' : 'visible'}}>Читать
         </button>
@@ -30,7 +30,7 @@ export default class Post extends Component {
           height: this.state.visible ? 'auto' : 0,
           transition: 'height 2s ease'
         }}
-        dangerouslySetInnerHTML={{__html:data.text}}></p>
+        dangerouslySetInnerHTML={{__html:post.text}}></p>
         <button href="#" className={`post_readLess`} onClick={this.handleClick}
                 style={{visibility: this.state.visible ? 'visible' : 'hidden'}}>Скрыть
         </button>

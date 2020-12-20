@@ -6,7 +6,7 @@ export default class Blog extends  Component {
   render() {
     return (
       <div className={'posts'}>
-        <Posts data={posts}/>
+        <Posts posts={posts}/>
       </div>
     )
   }
