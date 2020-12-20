@@ -1,6 +1,94 @@
 module.exports= {
   posts:[
     {
+    title:'Что это такое, и какую информацию тут можно найти //в статье про это ничего нет :( ',
+    littleText: "что мы тут делаем",
+    text:"<h2 id=\"-\">О чем этот блог?</h2>\n" +
+      "<p>В этом блоге я буду пытаться писать код этого блога.<br>В то же время я буду стараться делать акцент на написание тестов для этого кода. И в то же время я буду писать об этом статьи, собственно это и есть цель блога.<br>К сожалению, я не обладаю писательскими талантами так, что по большей мере все это делается для меня лично. Но если вы тоже найдете, что-то для себя во всем этом, я буду очень рад. \n" +
+      "<br><br>Пишите свои замечания и комментарии мне сразу в телеграм <code>@alexandrpenkov</code><br>Код вот тут <a href=\"https://github.com/apenkov/test_blog\">https://github.com/apenkov/test_blog</a> </p>\n"
+  },
+    {
+      title:'Создаем реакт приложение которое далее будем тестировать. Часть 1',
+      littleText: "установка create react app и первые компоненты",
+      text:"<h1 id=\"-\">Что сначала</h1>\n" +
+        "<p>начнем писать мы на react  // просто так<br>для начала установим <code>create-react-app</code><br>сделаем все по шагам отсюда <a href=\"https://create-react-app.dev/docs/getting-started/\">https://create-react-app.dev/docs/getting-started/</a><br>продублирую кратко команды которые надо вводить в терминале с краткими комментариями<br>после <code>//</code> это комментарий его не надо копировать в свой терминал</p>\n" +
+        "<pre><code><span class=\"hljs-string\">npm </span><span class=\"hljs-string\">uninstall </span>-g <span class=\"hljs-built_in\">create-react-app</span> // это глобальная установка что бы вызвать потом <span class=\"hljs-built_in\">create-react-app</span> в любом местее  \n" +
+        "// перейдите в директорию в которой будете работать\n" +
+        "<span class=\"hljs-string\">npx </span><span class=\"hljs-built_in\">create-react-app</span> <span class=\"hljs-string\">my-app </span>// вызываем то что мы скачали и просим создать нам простой шаблон приложения\n" +
+        "<span class=\"hljs-string\">cd </span><span class=\"hljs-string\">my-app </span>//переходим в созданную папку\n" +
+        "<span class=\"hljs-string\">npm </span><span class=\"hljs-string\">start </span>// запускаем сборки приложения // в конце она автоматически откроется в бразуере, если нет то к терминале будет ссылка на локал хост с портом где можно открыть приложение\n" +
+        "</code></pre><h3 id=\"-\">Теперь пора превратить это в блог</h3>\n" +
+        "<p>//перейдем в папку <code>./src</code> и создадим директорию <code>Components</code>, а в ней файл <code>Blog.js</code>.<br>Создадим наш основной компонент Blog, в том же файле, где компонент App.  </p>\n" +
+        "<pre><code><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Blog</span>(<span class=\"hljs-params\"></span>) </span>{\n" +
+        "  <span class=\"hljs-keyword\">return</span> (\n" +
+        "    <span class=\"xml\"><span class=\"hljs-tag\">&lt;&gt;</span>\n" +
+        "      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>\n" +
+        "        this is blog\n" +
+        "      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n" +
+        "    <span class=\"hljs-tag\">&lt;/&gt;</span>\n" +
+        "  )\n" +
+        "}</span>\n" +
+        "</code></pre><p>Каждый пост будет в формате  </p>\n" +
+        "<pre><code>data = {\n" +
+        "    title: <span class=\"hljs-symbol\">'second</span> post',\n" +
+        "    littleText: <span class=\"hljs-symbol\">'preview</span> text',\n" +
+        "    text: <span class=\"hljs-symbol\">'big</span> text'\n" +
+        "}\n" +
+        "</code></pre><p>компонент для каждого поста будет выглядеть вот так (в пропсах передаем объект выше наш пост)  </p>\n" +
+        "<pre><code>\n" +
+        "<span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Post</span>(<span class=\"hljs-params\">props</span>) </span>{\n" +
+        "  <span class=\"hljs-keyword\">const</span> post = props.post;\n" +
+        "  <span class=\"hljs-keyword\">return</span> (\n" +
+        "      <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"post\"</span>&gt;</span>\n" +
+        "        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"title\"</span>&gt;</span>{post.title}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n" +
+        "        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"preview\"</span> &gt;</span>{post.littleText}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n" +
+        "        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">{</span>`<span class=\"hljs-attr\">body</span>`} &gt;</span>{post.text}<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span>\n" +
+        "      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n" +
+        "  )\n" +
+        "}\n" +
+        "</code></pre><hr>\n" +
+        "<p><em>Бежим дальше</em>  </p>\n" +
+        "<p>Посты в блог я планирую передавать в формате  </p>\n" +
+        "<pre><code>posts = {\n" +
+        "  [\n" +
+        "    {\n" +
+        "      title: <span class=\"hljs-symbol\">'first</span> post',\n" +
+        "      littleText: <span class=\"hljs-symbol\">'preview</span> text',\n" +
+        "      text: <span class=\"hljs-symbol\">'big</span> text'\n" +
+        "    }, {\n" +
+        "    title: <span class=\"hljs-symbol\">'second</span> post',\n" +
+        "    littleText: <span class=\"hljs-symbol\">'preview</span> text',\n" +
+        "    text: <span class=\"hljs-symbol\">'big</span> text'\n" +
+        "  }\n" +
+        "  ]\n" +
+        "}\n" +
+        "</code></pre><p>То есть нам надо пройти по массиву <code>data</code> и для каждого поста создать компонент <code>Post</code><br>И тогда компонент для отображения всех произвольного количества постов =&gt;  </p>\n" +
+        "<pre><code><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">Posts</span>(<span class=\"hljs-params\">props</span>) </span>{\n" +
+        "  <span class=\"hljs-keyword\">const</span> posts = props.posts;\n" +
+        "  <span class=\"hljs-keyword\">const</span> postsTemplate = posts.map(<span class=\"hljs-function\">(<span class=\"hljs-params\">post, index</span>)=&gt;</span>{\n" +
+        "    <span class=\"hljs-keyword\">return</span> (\n" +
+        "      <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">key</span>=<span class=\"hljs-string\">{index}</span>&gt;</span>\n" +
+        "        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Post</span> <span class=\"hljs-attr\">post</span> =<span class=\"hljs-string\">{post}/</span>&gt;</span>\n" +
+        "      <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n" +
+        "    )\n" +
+        "  })\n" +
+        "  return(\n" +
+        "    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>\n" +
+        "      {postsTemplate}\n" +
+        "    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n" +
+        "  )\n" +
+        "}</span>\n" +
+        "</code></pre><p>его мы передаем в компонент <code>App</code>  </p>\n" +
+        "<pre><code><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">App</span>(<span class=\"hljs-params\"></span>) </span>{\n" +
+        "  <span class=\"hljs-keyword\">return</span> (\n" +
+        "    <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"App\"</span>&gt;</span>\n" +
+        "      <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Posts</span> <span class=\"hljs-attr\">posts</span>=<span class=\"hljs-string\">{posts}/</span>&gt;</span>\n" +
+        "    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n" +
+        "  );\n" +
+        "}</span>\n" +
+        "</code></pre><p>и тогда финальный вариант на текущий момент выглядит вот так<br>(тут картинка)<br>Вот код, который есть на данный момент, все что мы писали, находится в <code>src/App.js</code><br><a href=\"https://github.com/apenkov/test-blog-examplees/blob/create-project/src/App.js\">https://github.com/apenkov/test-blog-examplees/blob/create-project/src/App.js</a>  </p>\n"
+    },
+    {
       title:'2 статья, пишем первый тест',
       littleText:"написание теста для react, с помощью jest и react-test-renderer",
       text:"<p>Добавим первый тест для компонента Post создадим в папке <code>/Componeents</code> папку <code>test</code>, а в ней файл <code>Post.test.js</code> нужно будет установить зависимость <code>react-test-renderer</code>  и за импортить ее в файл вместе c реактом и самим компонентом Post<br>Создадим сам тест получилось вот так </p>\n" +
@@ -123,12 +211,6 @@ module.exports= {
         "теперь gh pages будет брать статику из этой ветке и отображать ее нам, в ИНТЕРНЕТЕ.\n" +
         "В следующией статье посомтрим почему все равно ничего не заработало, всем пока !\n" +
         "))</p>\n"
-    },{
-      title:'Что это такое, и какую информацию тут можно найти //в статье про это ничего нет :( ',
-      littleText: "что мы тут делаем",
-      text:"<p>##О чем этот блог?\n" +
-        "В этом блоге я буду пытаться писать код этого блога.<br>В то же время я буду стараться делать акцент на написание тестов для этого кода. И в то же время я буду писать об этом статьи, собственно это и есть цель блога.<br>К сожалению, я не обладаю писательскими талантами так, что по большей мере все это делается для меня лично. Но если вы тоже найдете, что-то для себя во всем этом, я буду очень рад. \n" +
-        "<br><br>Пишите свои замечания и комментарии мне сразу в телеграм <code>@alexandrpenkov</code><br>Код вот тут <a href=\"https://github.com/apenkov/test_blog\">https://github.com/apenkov/test_blog</a> </p>\n"
     },{
       title:'3 статья, пишем ci на github actions для нашего теста',
       littleText: "превью",

@@ -5,17 +5,20 @@ import Posts from "../Posts";
 describe('posts tests', () => {
   it('render posts', () => {
     const posts = renderer
-      .create(<Posts data={[
-        {
-        title:'first post',
-        littleText:'little text',
-        text:'big text'
-      },{
-          title:'second post',
-          littleText:'little text',
-          text:'big text'
-        }
-      ]}/>)
+      .create(<Posts
+        posts={
+          [
+            {
+              title: 'first post',
+              littleText: 'little text',
+              text: 'big text'
+            }, {
+            title: 'second post',
+            littleText: 'little text',
+            text: 'big text'
+          }
+          ]
+        }/>)
       .toJSON();
     expect(posts).toMatchSnapshot();
   })
