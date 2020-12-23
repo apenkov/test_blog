@@ -48,7 +48,6 @@ exports[`post tests first tests 1`] = `
   />
   <button
     className="post_readLess"
-    href="#"
     onClick={[Function]}
     style={
       Object {
@@ -56,7 +55,11 @@ exports[`post tests first tests 1`] = `
       }
     }
   >
-    Скрыть
+    <a
+      href="#undefined"
+    >
+      Скрыть
+    </a>
   </button>
 </div>
 `;

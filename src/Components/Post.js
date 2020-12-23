@@ -18,8 +18,9 @@ export default class Post extends Component {
 
   render() {
     const post = this.props.post;
+    const anchor = this.props.anchor;
     return (
-      <div className="post">
+      <div className="post" id={anchor}>
         <p className="title">{post.title}</p>
         <p className="preview" style={{visibility: this.state.visible ? 'hidden' : 'visible'}}>{post.littleText}</p>
         <button href="#" className={`post_readMore`} onClick={this.handleClick}
@@ -31,8 +32,9 @@ export default class Post extends Component {
           transition: 'height 2s ease'
         }}
         dangerouslySetInnerHTML={{__html:post.text}}></p>
-        <button href="#" className={`post_readLess`} onClick={this.handleClick}
-                style={{visibility: this.state.visible ? 'visible' : 'hidden'}}>Скрыть
+        <button className={`post_readLess`} onClick={this.handleClick}
+                style={{visibility: this.state.visible ? 'visible' : 'hidden'}}>
+          <a href={`#${anchor}`}>Скрыть</a>
         </button>
       </div>
     )
