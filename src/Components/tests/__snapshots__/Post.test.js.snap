@@ -8,6 +8,13 @@ exports[`post tests first tests 1`] = `
     className="title"
   >
     title
+    <button
+      className="linkToPost"
+      href="#"
+      onClick={[Function]}
+    >
+      link
+    </button>
   </p>
   <p
     className="preview"

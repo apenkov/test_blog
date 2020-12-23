@@ -11,6 +11,13 @@ exports[`posts tests render posts 1`] = `
         className="title"
       >
         first post
+        <button
+          className="linkToPost"
+          href="#"
+          onClick={[Function]}
+        >
+          link
+        </button>
       </p>
       <p
         className="preview"
@@ -75,6 +82,13 @@ exports[`posts tests render posts 1`] = `
         className="title"
       >
         second post
+        <button
+          className="linkToPost"
+          href="#"
+          onClick={[Function]}
+        >
+          link
+        </button>
       </p>
       <p
         className="preview"

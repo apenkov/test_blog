@@ -21,7 +21,14 @@ export default class Post extends Component {
     const anchor = this.props.anchor;
     return (
       <div className="post" id={anchor}>
-        <p className="title">{post.title}</p>
+        <p className="title">{post.title}
+          <button href="#" className='linkToPost' onClick={() => {
+            navigator.clipboard.writeText(`${window.location.href}#${anchor}`);
+            }
+          }>
+            link
+          </button>
+        </p>
         <p className="preview" style={{visibility: this.state.visible ? 'hidden' : 'visible'}}>{post.littleText}</p>
         <button href="#" className={`post_readMore`} onClick={this.handleClick}
                 style={{visibility: this.state.visible ? 'hidden' : 'visible'}}>Читать
