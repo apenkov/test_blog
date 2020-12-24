@@ -5,11 +5,19 @@ exports[`posts tests render posts 1`] = `
   <div>
     <div
       className="post"
+      id={0}
     >
       <p
         className="title"
       >
         first post
+        <button
+          className="linkToPost"
+          href="#"
+          onClick={[Function]}
+        >
+          link
+        </button>
       </p>
       <p
         className="preview"
@@ -50,7 +58,6 @@ exports[`posts tests render posts 1`] = `
       />
       <button
         className="post_readLess"
-        href="#"
         onClick={[Function]}
         style={
           Object {
@@ -58,18 +65,30 @@ exports[`posts tests render posts 1`] = `
           }
         }
       >
-        Скрыть
+        <a
+          href="#0"
+        >
+          Скрыть
+        </a>
       </button>
     </div>
   </div>
   <div>
     <div
       className="post"
+      id={1}
     >
       <p
         className="title"
       >
         second post
+        <button
+          className="linkToPost"
+          href="#"
+          onClick={[Function]}
+        >
+          link
+        </button>
       </p>
       <p
         className="preview"
@@ -110,7 +129,6 @@ exports[`posts tests render posts 1`] = `
       />
       <button
         className="post_readLess"
-        href="#"
         onClick={[Function]}
         style={
           Object {
@@ -118,7 +136,11 @@ exports[`posts tests render posts 1`] = `
           }
         }
       >
-        Скрыть
+        <a
+          href="#1"
+        >
+          Скрыть
+        </a>
       </button>
     </div>
   </div>

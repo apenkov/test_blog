@@ -7,7 +7,7 @@ export default class Posts extends Component {
     const postsTemplate = posts.map((post, index)=>{
       return (
         <div key={index}>
-         <Post post ={post}/>
+         <Post post ={post} anchor={index}/>
         </div>
       )
     })
